@@ -1100,6 +1100,17 @@ section {
     .contact-card {
         padding: 30px 20px;
     }
+
+    .event-icon {
+        font-size: 2.5rem;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .event-icon img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* Accessibility */
