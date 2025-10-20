@@ -657,6 +657,90 @@ section {
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
 }
 
+/* Live Stream Section */
+.live-section {
+    background: linear-gradient(135deg, var(--accent-lavender) 0%, var(--accent-pink) 100%);
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Gradient transition from events section to live section */
+.live-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom,
+        rgba(253, 251, 247, 1) 0%,
+        rgba(253, 251, 247, 0.8) 20%,
+        rgba(253, 251, 247, 0.5) 40%,
+        rgba(253, 251, 247, 0.3) 60%,
+        rgba(253, 251, 247, 0.1) 80%,
+        transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Gradient transition from live section to footer */
+.live-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(253, 251, 247, 0.1) 20%,
+        rgba(253, 251, 247, 0.3) 40%,
+        rgba(253, 251, 247, 0.5) 60%,
+        rgba(253, 251, 247, 0.8) 80%,
+        rgba(253, 251, 247, 1) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.live-description {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 20px auto 40px;
+    max-width: 700px;
+    color: var(--text-dark);
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+.live-video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
 /* Footer */
 .footer {
     background: 
